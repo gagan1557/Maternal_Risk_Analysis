@@ -1,0 +1,242 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9164c660dc.js"></script>
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <style>
+
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+
+  background-size:cover;
+<!--  background-image: url("{% static '/DiabetesPrediction/images/backgg.jpg' %}");-->
+  /* background: #5CA4EA; */
+
+  overflow: hidden;
+}
+img{
+filter:blur(2px);
+    width: 100vw;
+  height: 100vh;
+    background-size:cover;
+    position:absolute;
+
+}
+
+.container {
+  width: 1200px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.4);
+  border-radius:20px;
+  display: flex;
+
+
+
+
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+
+}
+
+.btn {
+  width: 250px;
+  height: 80px;
+  cursor: pointer;
+  background: white;
+border-radius:10px;
+  outline: none;
+  transition: 1s ease-in-out;
+
+    margin-top:60px;
+  margin-left: -420px;
+
+}
+.btn2 {
+  width: 250px;
+  height: 80px;
+  cursor: pointer;
+  background: white;
+  border-radius:10px;
+
+  outline: none;
+  transition: 1s ease-in-out;
+    margin-top:0px;
+  margin-left:200px;
+
+}
+
+<!--svg {-->
+<!--  position: absolute;-->
+<!--  left: 470px;-->
+<!--  top: 30px;-->
+<!--  fill: none;-->
+<!--  stroke: #fff;-->
+<!--  stroke-dasharray: 150 480;-->
+<!--  stroke-dashoffset: 150;-->
+<!--  transition: 1s ease-in-out;-->
+<!--}-->
+
+<!--.btn:hover {-->
+<!--  transition: 0.5s ease-in-out;-->
+<!--  background: transparent;-->
+<!--  /* -webkit-text-stroke:4px white; */-->
+
+<!--  border: 3px solid transparent;-->
+<!--}-->
+
+<!--.btn:hover svg {-->
+<!--  stroke-dashoffset: -480;-->
+<!--}-->
+
+
+.btn span {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+<!--#svg2 {-->
+<!--  position: absolute;-->
+<!--  left: 470px;-->
+<!--  top: 30px;-->
+<!--  fill: none;-->
+<!--  stroke: #fff;-->
+<!--  stroke-dasharray: 150 480;-->
+<!--  stroke-dashoffset: 150;-->
+<!--  transition: 1s ease-in-out;-->
+<!--}-->
+<!--.btn2:hover {-->
+<!--  transition: 0.5s ease-in-out;-->
+<!--  background: transparent;-->
+<!--  /* -webkit-text-stroke:4px white; */-->
+
+<!--  border: 3px solid transparent;-->
+<!--}-->
+
+<!--.btn2:hover svg {-->
+<!--  stroke-dashoffset: -480;-->
+<!--}-->
+
+
+.btn2 span {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+
+
+
+video{
+  height:1080px;
+  width:auto;
+  position: absolute;
+    }
+
+h1{
+    margin-top:0px;
+
+    position: relative;
+    color: white;
+
+    align-items:center;
+    font-size:100px;
+    font-weight:500;
+    margin-bottom:0px;
+
+}
+<!--h1{-->
+<!--    -webkit-text-stroke:0.3px black;-->
+<!--    }-->
+        .chatbot{
+        height:50px;
+        width:50px;
+        border-radius:999px;
+        margin-top:170px;
+        position:absolute;
+        left:1130px;
+        font-size:30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <img src="{% static '/DiabetesPrediction/images/backgg.jpg'%}" alt="">
+      <div class="container">
+
+<!--        <video autoplay muted loop id="myVideo">-->
+<!--            <source src="{% static '/DiabetesPrediction/images/1057097594.mp4'%}" type="video/mp4">-->
+<!--          </video>-->
+
+      <div align="center">
+        <h1>Your Health Matters</h1>
+        <form action="predict">
+            <!-- <input type="submit" value="Lets get started"> -->
+            <div class="center">
+                <button class="btn">
+<!--                  <svg width="250px" height="60px" viewBox="0 0 250 60" class="border">-->
+<!--                    <polyline points="249,1 249,59 1,59 1,1 249,1" class="bg-line" />-->
+<!--                    <polyline points="249,1 249,59 1,59 1,1 249,1" class="hl-line" />-->
+<!--                  </svg>-->
+                  <span>Physical Health analysis</span>
+
+                </button>
+
+
+              </div>
+        </form>
+
+        <form action="predict2">
+            <!-- <input type="submit" value="Lets get started"> -->
+            <div class="center">
+          <button class="btn2" >
+<!--                  <svg width="250px" height="60px" viewBox="0 0 250 60" class="border" id="svg2">-->
+<!--                    <polyline points="249,1 249,59 1,59 1,1 249,1" class="bg-line" />-->
+<!--                    <polyline points="249,1 249,59 1,59 1,1 249,1" class="hl-line" />-->
+<!--                  </svg>-->
+
+                  <span>Mental Health analysis</span>
+
+          </button>
+                </div>
+        </form>
+
+
+        </div>
+        <form action="hello">
+<!--          <a href="MaternalRisk\MaternalRiskProject\Template\hello.html">-->
+
+          <button  class="chatbot"><i class="fa-duotone fa-message-bot" style="--fa-secondary-opacity: 0.6;"></i></button>
+<!--            </a>-->
+            </form>
+    </div>
+
+
+
+</body>
+</html>

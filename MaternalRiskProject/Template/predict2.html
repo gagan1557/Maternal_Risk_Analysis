@@ -1,0 +1,279 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <title>Mental Health analysis</title>
+    <style>
+        body,html {
+    width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size:cover;
+  overflow: hidden;
+        }
+
+        #imgg{
+filter:blur(4px);
+    width: 100vw;
+  height: 100vh;
+    background-size:cover;
+    position:absolute;
+
+}
+.container{
+        position:absolute;
+        }
+   .main{
+            align-items: center;
+
+            top: 170px;
+            left: 1070px;
+            width: 1200px;
+            margin-top:75px;
+            margin-left:330px;
+            display: flex;
+            border-radius:20px;
+            background-color: rgba(0,0,0,0.4);
+
+            height: 800px;
+
+        }
+        h1{
+            color: white;
+            font-size: 33px;
+            font-weight: bold;
+        }
+        h2{
+            color:white;
+
+        }
+        input[type=submit]{
+        margin-top:8px;
+            background-color: #4dc3ff;
+            border-radius: 2px;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight:bold;
+            margin-top: 15px;
+            font-size:15px;
+        }
+
+
+
+
+        .left{
+<!--            background-color: #969494bf;-->
+            background-color: rgba(255,163,163);
+            width: 40%;
+            border-radius:20px;
+            background-size: cover;
+
+        }
+
+        .container{
+        display: flex;
+        align-items: center;
+        }
+
+        .right{
+            top:150px;
+            width:350px;
+            left:880px;
+            position:absolute;
+<!--        align-items: center;-->
+            padding: 3%;
+        }
+
+
+        #heading{
+        width:600px;
+        font-family: "Times New Roman", Times, serif;
+        margin-top:0px;
+        margin-bottom:50px;
+
+
+        font-size:30px;}
+        #1st{
+        margin-bottom:0px}
+
+        #img1{
+        height:66.7vh;
+        mix-blend-mode:darken;
+        }
+        .form{
+        display:flex;
+
+        }
+        #submit{
+        background: linear-gradient(to bottom, #0000ff 0%, #33cccc 100%);
+        height:70px;
+        width:200px;
+        border-radius:20px ;
+        margin-bottom:0px;
+        margin-top:70px;
+        margin-left:200px;
+        position:absolute;
+        left:10px;
+        top:500px;
+        }
+        select{
+        width:250px;
+        height:40px;
+        }
+
+        input{
+        border-radius:8px;
+        width:250px;
+        height:35px;}
+
+        label{
+        font-size:25px;
+        font-weight:60px;
+        color:white;
+        }
+        .form1{
+        margin-right:100px;
+        }
+        .form2{
+
+        margin-right:300px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<img id="imgg" src="{% static '/DiabetesPrediction/images/1final.avif'%}">
+<div class="container">
+<div align="center" class="main">
+    <div class="left">
+    <h1>Please enter the following information</h1>
+
+    <h2>Result:{{mresult2}}</h2>
+        <img id="img1" src="{% static '/DiabetesPrediction/images/1sttt-removebg-preview.png'%}" alt="">
+    </div>
+    <div class="right">
+        <h2 id="heading">A pregnant body is found to be beautiful and an incredible reminder of what a <br>woman's body is made to do</h2>
+
+    <form class="form" action="result">
+        <div class="form1">
+
+                <label  > <b>Age:</b> </label><br>
+                <select name="n11">
+                <option value="" >Select Option </option>
+                <option value="1" >25-30 </option>
+                <option value="2" >30-35 </option>
+                <option value="3" >35-40 </option>
+                <option value="4" >40-45 </option>
+                <option value="5" >45-50 </option>
+
+                </select>
+
+
+
+        <br>
+        <br>
+
+
+
+<!--                <td align="right">SystolicBP:</td>-->
+        <label > <b>Feeling sad:</b> </label><br>
+                <select name="n12">
+                <option value="" >Select Option </option>
+                <option value="2" >YES </option>
+                <option value="0" >NO </option>
+                <option value="1" >SOMETIME </option>
+
+<!--                    <option value="" {% if not n12_selected %} selected {% endif %} disabled>Choose a category</option>-->
+<!--                    <option value="2" {% if n12_selected == "YES" %} selected {% endif %}>YES</option>-->
+<!--                    <option value="0" {% if n12_selected == "NO" %} selected {% endif %}>NO</option>-->
+<!--                    <option value="1" {% if n12_selected == "SOMETIME" %} selected {% endif %}>SOMETIMES</option>-->
+                </select>
+        <br>
+        <br>
+
+
+
+
+<!--                <td align="right">DiastolicBP:</td>-->
+        <label > <b>Irritated Nature:</b> </label><br>
+                <select name="n13">
+                <option value="" >Select Option </option>
+                <option value="2" >YES </option>
+                <option value="0" >NO </option>
+                <option value="1" >SOMETIME </option>
+                </select>
+        <br>
+        <br>
+            <label > <b>Trouble sleeping:</b> </label><br>
+                <select name="n14">
+                <option value="" >Select Option </option>
+                <option value="2" >YES </option>
+                <option value="0" >NO </option>
+                <option value="1" >TWO OR MORE DAYS A WEEK </option> </select>
+
+            </div>
+        <div class="form2">
+
+<!--                <td align="right">BS:</td>-->
+
+
+<!--                <td align="right">Body Temp:</td>-->
+        <label > <b>Confused Behaviour:</b> </label><br>
+                <select name="n15">
+                <option value="" >Select Option </option>
+                <option value="2" >YES </option>
+                <option value="0" >NO </option>
+                <option value="1" >OFTEN </option> </select>
+        <br>
+        <br>
+
+
+<!--                <td align="right">Heart rate:</td>-->
+        <label > <b>Overeating:</b> </label><br>
+                <select name="n16">
+                <option value="" >Select Option </option>
+                <option value="2" >YES </option>
+                <option value="1" >NO </option>
+                <option value="0" >NOT AT ALL </option> </select>
+        <br>
+        <br>
+
+
+        <label > <b>Feeling of guilt:</b> </label><br>
+                <select name="n17">
+                <option value="" >Select Option </option>
+                <option value="2" >YES </option>
+                <option value="0" >NO </option>
+                <option value="1" >MAYBE </option> </select>
+        <br>
+        <br>
+
+
+        <label > <b>Problems of bonding:</b> </label><br>
+                <select name="n18">
+                <option value="" >Select Option </option>
+                <option value="2" >YES </option>
+                <option value="0" >NO </option>
+                <option value="1" >SOMETIME </option> </select>
+        <br>
+        <br>
+            </div>
+
+<input  id="submit" type='submit' value="SUBMIT">
+    </form>
+
+
+    </div>
+</div>
+</div>
+</body>
+</html>
